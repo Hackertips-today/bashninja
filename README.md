@@ -8,6 +8,8 @@ Linkedin: https://linkedin.com/in/yoursystem
 
 # bashninja
 
+Create files: for i in {3..50}; do > tips/$i.txt; done
+
 
 #!/bin/bash
 
