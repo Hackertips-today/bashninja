@@ -6,12 +6,28 @@
 Distro: https://hackertips.today
 Linkedin: https://linkedin.com/in/yoursystem
 
-# bashninja
+# bashninja - common tasks to speed things up
+# Remove whitespace from output 
+    3 methods to remove white space  grep or awk or sed
+    cat yourfile.txt | sed '/^$/d'  #  ^$ matches blank lines / d deletes matching lines
+    cat yourfile.txt | grep -v '^$'
+    cat yourfile.txt | awk 'NF'
 
-Create files: for i in {3..50}; do > tips/$i.txt; done
 
 
-#!/bin/bash
+# Create 47 files
+    for i in {3..50}; do > $i.txt; done     # 3.txt 4.txt ... 50.txt all created in current dir filesize 0
+
+# bash script shbang options
+ #/bin/bash -e         # for strict error handling.
+ #/bin/bash -x  # debugging
+ #/bin/bash  -v #  for debugging
+ #/bin/bash --noprofile # dont use .bashrc env vars
+ #/bin/bash --norc  # for a clean environment 
+ #!/usr/bin/env -S bash -e # ses env -S to pass options to Bash (more compatible with env on some systems)
+
+ 
+   
 
 # Define colors for output
 GREEN='\033[0;32m'
