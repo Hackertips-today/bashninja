@@ -1,5 +1,5 @@
 # Setup Samba in Ubuntu quick
-Setting up a Samba server on an Ubuntu server to share /home/subz is straightforward. Follow these quick steps:
+Setting up a Samba server on an Ubuntu server to share /home/user is straightforward. Follow these quick steps:
 
 
 1. Install Samba
