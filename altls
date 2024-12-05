@@ -1,0 +1,20 @@
+
+
+
+ ▗▄▖ ▗▖ ▗▄▄▄▖▗▄▄▄▖▗▄▄▖ ▗▖  ▗▖ ▗▄▖▗▄▄▄▖▗▄▄▄▖▗▖  ▗▖▗▄▄▄▖ ▗▄▄▖        ▗▖    ▗▄▄▖
+▐▌ ▐▌▐▌   █  ▐▌   ▐▌ ▐▌▐▛▚▖▐▌▐▌ ▐▌ █    █  ▐▌  ▐▌▐▌   ▐▌           ▐▌   ▐▌   
+▐▛▀▜▌▐▌   █  ▐▛▀▀▘▐▛▀▚▖▐▌ ▝▜▌▐▛▀▜▌ █    █  ▐▌  ▐▌▐▛▀▀▘ ▝▀▚▖        ▐▌    ▝▀▚▖
+▐▌ ▐▌▐▙▄▄▖█  ▐▙▄▄▖▐▌ ▐▌▐▌  ▐▌▐▌ ▐▌ █  ▗▄█▄▖ ▝▚▞▘ ▐▙▄▄▖▗▄▄▞▘        ▐▙▄▄▖▗▄▄▞▘
+                                                                             
+                                                                             
+# Here are some interesting methods (and great ways of learning how to chain/pipe cmds to get the same output you would from the ls cmd natively:
+
+
+# Obviousy sudo is not required, you can paste these in and if you like them put them in .bashrc   - simply paste one at time in then run the alias name:
+
+alias altls='for i in * ; do [ -e "$i" ] && ( ( [ -d "$i" ] && echo -ne "$i/\t" ) || ( [ -h "$i" ] && echo -ne "$i@\t" ) || ( [ -p "$i" ] && echo -ne "$i\|\t" ) || ( [ -S "$i" ] && echo -ne "$i=\t" ) || ( [ -x "$i" ] && echo -ne "$i*\t" ) || echo -ne "$i\t" ) ; done; [ -e "$i" ] && echo'
+alias ls1='for i in * ; do [ -e "$i" ] && ( ( [ -d "$i" ] && echo $i/ ) || ( [ -h "$i" ] && echo $i@ ) || ( [ -p "$i" ]  && echo $i\| ) || ( [ -S "$i" ] && echo $i= ) || ( [ -x "$i" ] && echo $i\* ) || echo $i ) ; done'
+alias lsa='for i in .* * ; do [ -e "$i" ] && ( ( [ -d "$i" ] && echo -ne "$i/\t" ) || ( [ -h "$i" ] && echo -ne "$i@\t" ) || ( [ -p "$i" ] && echo -ne "		$i\|\t" ) || ( [ -S "$i" ] && echo -ne "$i=\t" ) || ( [ -x "$i" ] && echo -ne "$i*\t" ) || echo -ne "$i\t" ) ; done; echo'
+alias lsa1='for i in .* * ; do [ -e "$i" ] && ( ( [ -d "$i" ] && echo $i/ ) || ( [ -h "$i" ] && echo $i@ ) || ( [ -p "$i" ]  && echo $i\| ) || ( [ -S "$i" ] && echo $i= ) || ( [ -x "$i" ] && echo $i\* ) || echo $i ) ; done'
+
+
