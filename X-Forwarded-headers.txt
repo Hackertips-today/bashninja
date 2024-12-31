@@ -1,0 +1,14 @@
+Explanation of Each Header
+X-Forwarded-For: Identifies the original IP address of the client.
+X-Forwarded-Host: Specifies the original host requested by the client.
+X-Forwarded-Proto: Indicates the protocol (HTTP or HTTPS) used by the client.
+X-Forwarded-Port: Denotes the original port used by the client.
+X-Forwarded-Server: Identifies the name of the forwarding server.
+X-Forwarded-Client-IP: Represents the client's original IP address (an alternative to X-Forwarded-For).
+X-Forwarded-Scheme: The protocol scheme (e.g., http or https).
+X-Forwarded-SSL: Indicates whether SSL was used (e.g., on or off).
+X-Forwarded-By: Identifies the intermediary/proxy forwarding the request.
+X-Forwarded-For-Original: Preserves the original value of X-Forwarded-For if it is modified downstream.
+X-Forwarded-IP: Specifies the client’s original IP address (alternative naming).
+X-Forwarded-Request-URI: The original request URI sent by the client.
+X-Forwarded-Method: The HTTP method (e.g., GET, POST) used in the original request.
