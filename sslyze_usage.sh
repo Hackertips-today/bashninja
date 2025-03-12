@@ -1,0 +1,1 @@
+function sslyze_full() ( sslyze  --certinfo      --sslv2      --tlsv1_2    --http_headers    --fallback      --elliptic_curves   --tlsv1   --heartbleed   --compression   --tlsv1_1       --robot   --early_data       --openssl_ccs    --json_out $2      --reneg  --mozilla_config old $1; echo "Tested $1 - Wrote - $2";echo; )
